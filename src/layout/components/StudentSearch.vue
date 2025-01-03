@@ -43,9 +43,11 @@
   { name: '王五', age: 19, className: '三班' }
   ]);
 
+
   // 存储过滤后的学生数据
   const students = ref(allStudents.value);
 
+  
 // 查询学生函数
 function searchStudents() {
   if (name.value.trim() === '') {
@@ -57,7 +59,11 @@ function searchStudents() {
       student.name.includes(name.value.trim())    //用于检查一个字符串是否包含另一个字符串。//获取输入框中的 name 值，并使用 .trim() 方法去除前后空格。
     );
   }
+  // 显示查询结果
+showResults.value = true;
 }
+
+
   </script>
   
   <style scoped>
